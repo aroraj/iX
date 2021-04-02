@@ -39,6 +39,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+
 ![](https://cdn.glitch.com/f501e974-89f3-4ae2-bee4-a953a0b9305c%2Fezgif.com-gif-maker.gif?v=1617339048444)
 ![](https://cdn.glitch.com/f501e974-89f3-4ae2-bee4-a953a0b9305c%2Fezgif.com-gif-maker%20(1).gif?v=1617339029124)
 
