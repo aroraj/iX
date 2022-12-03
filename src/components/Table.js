@@ -3,7 +3,6 @@ import './BookTable.css';
 
 
 export default class Table extends Component {
-
   render() {
     return (
       <div>
@@ -31,11 +30,16 @@ export default class Table extends Component {
                     <i className="bi bi-x green underline pointer"
                     onClick={() => this.props.bookRemoved(book.id)}></i>
                   </td>
+                  <td>
+                    <button type="button" className="btn btn-primary" onClick={() => this.props.bookUpdated(book.id)}>
+                      Edit</button>
+                  </td>
                 </tr>
               })
             }
           </tbody>
         </table>
+
 
       </div>
     )

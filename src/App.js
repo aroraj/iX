@@ -11,11 +11,9 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-
     let booksString = localStorage.getItem('books');
     booksString = booksString ? booksString : '[]';
     const books = JSON.parse(booksString);
-
     this.state = { books: books };
   }
 
@@ -29,9 +27,12 @@ class App extends Component {
     this.saveBooksState(this.state.books);
   }
 
-  onBookUpdated(book) {
-    const updatedBookArr = this.state.books.map(t => t.id === book.id ? book : t);
-    this.saveBooksState(updatedBookArr);
+  onBookUpdated(bookId) {
+    //open the modal
+
+
+    /*const updatedBookArr = this.state.books.map(t => t.id === book.id ? book : t);
+    this.saveBooksState(updatedBookArr);*/
   }
 
   onBookRemoved(bookId) {
@@ -53,11 +54,13 @@ class App extends Component {
 
         <Table
           books={this.state.books}
-          bookUpdated={(book) => this.onBookUpdated(book)}
+          bookUpdated={(bookId) => this.onBookUpdated(bookId)}
           bookRemoved={(bookId) => this.onBookRemoved(bookId)}
         />
-
+        
       </div>
+      
+      
     );
   }
 }
